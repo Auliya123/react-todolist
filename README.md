@@ -1,2 +1,2 @@
-# react-todolist
+# todolist-react
 Created with CodeSandbox
