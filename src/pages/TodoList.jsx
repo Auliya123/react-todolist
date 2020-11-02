@@ -14,3 +14,5 @@ const TodoList = () => {
     </Paper>
   );
 };
+
+export default TodoList;
