@@ -12,6 +12,12 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return;
     }
 
+    if (value.length > 40) {
+      alert("Please create a shorter todo text !");
+      setValue("");
+      return; //Mencegah ke proses selanjutnya, jadi balik ke if lagi
+    }
+
     addTodo(value);
     setValue("");
   };
@@ -37,6 +43,6 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
 TodoForm.propTypes = {
   addTodo: PropTypes.func.isRequired,
-  showAdd: PropTypes.func.isRequired
+  showAdd: PropTypes.bool.isRequired
 };
 export default TodoForm;
