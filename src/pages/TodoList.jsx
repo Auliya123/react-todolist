@@ -15,9 +15,13 @@ const TodoList = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value, isCompleted: false }];
-
-    setTodos(addedTodo);
+    if (todos.length < 10) {
+      const addedTodo = [...todos, { text: value, isCompleted: false }];
+      setTodos(addedTodo);
+    } else {
+      alert("Jumlah todoList telah melebihi batas");
+      return;
+    }
   };
 
   const completeTodo = (index) => {
@@ -28,8 +32,6 @@ const TodoList = () => {
   };
 
   const showAddToggle = () => setShowAdd(!showAdd);
-
-  console.log("todos", todos);
 
   return (
     <Paper>
