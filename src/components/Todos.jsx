@@ -5,17 +5,25 @@ import PropTypes from "prop-types";
 const Todos = ({ todos, completeTodo }) => {
   return (
     <section className="todos">
-      {todos.map((todo, index) => {
-        return (
-          <Todo
-            key={index}
-            text={todo.text}
-            isCompleted={todo.isCompleted}
-            completeTodo={completeTodo}
-            index={index}
-          />
-        );
-      })}
+      {todos.length > 0 &&
+        todos.map((todo, index) => {
+          return (
+            <Todo
+              key={index}
+              text={todo.text}
+              isCompleted={todo.isCompleted}
+              completeTodo={completeTodo}
+              index={index}
+            />
+          );
+        })}
+      {todos.length === 0 && (
+        <div className="todo-placeholder-text">
+          No todos yet. Add todo by clicking{" "}
+          <span className="add-button-placeholder-text">ADD</span> button on top
+          left corner.
+        </div>
+      )}
     </section>
   );
 };
