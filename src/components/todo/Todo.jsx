@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // import styles from "./todo.module.css";
 
-import * as styles from "./todo.style";
+import * as styles from "./todo.styles";
 
 const Todo = ({ text, completeTodo, index, isCompleted }) => {
   const theme = useTheme();

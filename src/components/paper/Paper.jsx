@@ -4,7 +4,7 @@ import { useTheme } from "emotion-theming";
 import PropTypes from "prop-types";
 
 // import styles from "./paper.module.css";
-import * as styles from "./paper.style";
+import * as styles from "./paper.styles";
 
 const Paper = ({ children }) => {
   const theme = useTheme();
