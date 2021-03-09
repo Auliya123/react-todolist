@@ -2,8 +2,8 @@ import { css } from "@emotion/core";
 
 export const header = () =>
   css`
-    display: flex;
-    align-items: flex-start;
+    /* display: flex;
+    align-items: flex-start; */
   `;
 
 export const headerTitle = (theme) =>
