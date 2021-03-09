@@ -7,8 +7,8 @@ export const add = () =>
 
 export const addForm = () =>
   css`
-    display: flex;
-    align-items: flex-start;
+    /* display: flex;
+    align-items: flex-start; */
   `;
 
 export const addInput = ({ theme }) =>

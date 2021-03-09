@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 // import styles from "./todoform.module.css";
 
 import * as styles from "./todoform.styles";
+import Container from "../../layout/Container";
 
 const TodoForm = ({ addTodo, showAdd }) => {
   const theme = useTheme();
@@ -34,13 +35,15 @@ const TodoForm = ({ addTodo, showAdd }) => {
     return (
       <section css={styles.add}>
         <form css={styles.addForm} onSubmit={handleFormSubmit}>
-          <input
-            type="text"
-            css={styles.addInput({ theme })}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
-          <button css={styles.addBtn({ theme })}>Add</button>
+          <Container alignItems="flex-start">
+            <input
+              type="text"
+              css={styles.addInput({ theme })}
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
+            <button css={styles.addBtn({ theme })}>Add</button>
+          </Container>
         </form>
       </section>
     );
